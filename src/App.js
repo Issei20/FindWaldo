@@ -70,8 +70,8 @@ useEffect(() => {
   function checkValidity(e) {
     yordles.forEach((yordle) => {
      if(!yordle.found) { 
-      if( (((xPos <= yordle.coordX+15 && yPos <= yordle.coordY+15 ) && (xPos >= yordle.coordX-15 && yPos >= yordle.coordY-15 ))
-       || ((xPos <= yordle.coordX-15 && yPos <= yordle.coordY-15 ) && (xPos >= yordle.coordX+15 && yPos >= yordle.coordY+15 ))) && (e.target.id === yordle.name)) {
+      if( (((xPos <= yordle.coordX+25 && yPos <= yordle.coordY+25 ) && (xPos >= yordle.coordX-25 && yPos >= yordle.coordY-25 ))
+       || ((xPos <= yordle.coordX-25 && yPos <= yordle.coordY-25 ) && (xPos >= yordle.coordX+25 && yPos >= yordle.coordY+25 ))) && (e.target.id === yordle.name)) {
         yordle.found = true
         setFoundYordles([...foundYordles, yordle.name])
         console.log(foundYordles)
@@ -94,8 +94,8 @@ useEffect(() => {
  function dropDownMenu() {
    return (
     <div>
-    <div className="targetBox" style={{ left: xPos-25, top: yPos-25}}></div>
-      <ul className="yordleList" style={{ left: xPos+54, top: yPos-45}}>
+    <div className="targetBox" style={{ left: xPos-50, top: yPos-50}}></div>
+      <ul className="yordleList" style={{ left: xPos+80, top: yPos-45}}>
         <li id="Teemo" onClick={(e) => checkValidity(e)}>Teemo</li>
         <li id="Tristana" onClick={(e) => checkValidity(e)}>Tristana</li>
         <li id="Poppy" onClick={(e) => checkValidity(e)}>Poppy</li>
@@ -180,9 +180,9 @@ async function updatehigh() {
   function showInputMenu() {
     return (
      <div className='showScoresDiv'>
-       <label to="nameInput">You have made an highscore type your username to save your highscore</label>
+       <label className="nameNewScore" to="nameInput">You have made an highscore type your username to save your highscore</label>
      <input name="nameInput" id="nameInput" onChange={(e) => setUserName(e.target.value)}></input>
-     <button onClick={() => sendScore()}>Send</button>
+     <button className="sendBtn" onClick={() => sendScore()}>Send</button>
      </div>
     )
   }
@@ -200,7 +200,7 @@ async function updatehigh() {
   // render image map
   function imageRender() {
     return(<div>
-      <img className="lolChampions" src={championsImage} alt="lolChampions" useMap="#lolMap" width="900" height="500"></img>
+      <img className="lolChampions" src={championsImage} alt="lolChampions" useMap="#lolMap" width="1500" height="780"></img>
       <map name="lolMap">
       <area alt="teemo" id="Teemo" coords="525,447,571,503" shape="rect" />
      <area alt="tristana" id="Tristana" coords="537,238,578,200" shape="rect" />
@@ -245,7 +245,7 @@ async function updatehigh() {
     {allScores.map(item  => {
       if(item.name !== "anonymous")
       return (
-        <div>
+        <div className="paraScore">
         <div className="unitScore" ><p>Score : {item.score}</p></div>
         <div><p>Username : {item.name} </p></div>
         </div>
@@ -259,12 +259,12 @@ async function updatehigh() {
   return (
     <div className="App">
       <h1>Find the Yordles ! </h1> 
-      <h2>Find Teemo, Tristana and Poppy</h2>
-      <h3>Yordles found : {renderFound()} </h3>   
+      <h2 className="challenge">Find Teemo, Tristana and Poppy</h2>
+      <h3 className="yordleTitleFound">Yordles found : {renderFound()} </h3>   
       <Timer gameOver={gameOver} onGameOverChange={setGameOver} startTime={startTime} setStartTime={setStartTime} 
       endTime={endTime} setEndTime={setEndTime} start={start} setStart={setStart}
       timerOn={timerOn} setTimerOn={setTimerOn}/>
-      {canShowScore || gameOver ?<button className="restartBtn" onClick={() => restartGame()}>Restart</button> : null}  
+      {canShowScore || gameOver ?<button className="restartBtn" onClick={() => restartGame()}>RESTART</button> : null}  
       {showMenu ? dropDownMenu() : null}
       {gameOver === "finish" ? <p className="yourScore">Your score is : {highscore}</p> : null}
       {newRecord ? showInputMenu() : null }

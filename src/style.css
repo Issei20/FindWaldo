@@ -38,7 +38,6 @@ h3 {
     justify-content: center;
     width: 900px;
  
-
 }
 
 .timerContainer {
@@ -47,6 +46,7 @@ h3 {
     width: 900px;
     justify-content: center;
     align-items: center;
+    font-size: 1.3rem;
 }
 
 .foundStyle {
@@ -59,24 +59,32 @@ h3 {
     justify-content: center;
     align-items: center;
     margin: auto;
+    font-size: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.226);
+    width: 20vw;
+    border-radius: 50px;
+    border: 2px solid white;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    padding: 1vw;
 }
 
 .targetBox {
     position: absolute;
     border: 3px solid;
     color: rgba(255, 0, 0, 0.932);
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     z-index: 99 !important;
-    border-radius: 30px;
+    border-radius: 50px;
 }
 
 .lolChampions {
- display: flex;
- margin: auto;
- margin-top: 40px;
- border: 4px solid;
- color: rgb(168, 168, 168);
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    border: 4px solid;
+    color: rgb(168, 168, 168);
 }
 
 .btnStart {
@@ -84,6 +92,14 @@ h3 {
     justify-content: center;
     align-items: center;
     margin: auto;
+}
+
+.paraScore {
+    font-size: 1.5rem;
+}
+
+.yordleTitleFound {
+    font-size: 2rem;
 }
 
 .scoresContainer {
@@ -98,7 +114,8 @@ h3 {
     flex-direction: column;
     color: rgb(245, 237, 121);
     text-shadow: -2px 3px 2px rgba(0,0,0,0.22);
-    width: 200px;
+    width: 300px;
+    font-size: 1.1rem;
 }
 
 .unitScore {
@@ -106,7 +123,7 @@ h3 {
 }
 
 .dropDownMenu {
-        position: absolute;
+    position: absolute;
 }
 
 button {
@@ -144,11 +161,16 @@ li:hover {
     background-color: grey;
 }
 
+.challenge {
+    font-size: 1.8rem;
+}
 
 .btnStart {
     margin-top: 10px;
     margin-bottom: 10px;
-    
+    height: 5vh;
+    width: 5vw;
+    font-size: 1.6rem;
 }
 .restartBtn{
     margin: auto;
@@ -157,6 +179,11 @@ li:hover {
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    height: 5vh;
+    width: 5vw;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid rgba(255, 255, 255, 0.418);
 }
 .showScoresDiv {
     display: flex;
@@ -164,4 +191,22 @@ li:hover {
     justify-content: center;
     align-items: center;
     gap: 5px;
+}
+
+.nameNewScore {
+    font-size: 1.8rem;
+    background-color: rgba(0, 0, 0, 0.459);
+    padding: 5px;
+}
+
+.sendBtn {
+    height: 4vh;
+    width: 5vw;
+    font-size: 1.2rem;
+}
+
+#nameInput {
+    height: 4vh;
+    font-size: 1.5rem;
+    width: 10vw;
 }
