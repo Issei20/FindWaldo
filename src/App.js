@@ -180,9 +180,11 @@ async function updatehigh() {
   function showInputMenu() {
     return (
      <div className='showScoresDiv'>
+       <form onSubmit={() => sendScore()}>
        <label className="nameNewScore" to="nameInput">You have made an highscore type your username to save your highscore</label>
-     <input name="nameInput" id="nameInput" onChange={(e) => setUserName(e.target.value)}></input>
+     <input name="nameInput" id="nameInput" onChange={(e) => setUserName(e.target.value)} onSubmit={() => sendScore()}></input>
      <button className="sendBtn" onClick={() => sendScore()}>Send</button>
+     </form>
      </div>
     )
   }
