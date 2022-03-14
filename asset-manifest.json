@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/FindWaldo/static/css/main.6d5e234b.css",
-    "main.js": "/FindWaldo/static/js/main.c19b2554.js",
+    "main.js": "/FindWaldo/static/js/main.ac7af9e0.js",
     "static/media/bgLol.png": "/FindWaldo/static/media/bgLol.9cf67c41cde39eeb8d50.png",
     "static/media/championslol.jpg": "/FindWaldo/static/media/championslol.83d67b22b84106346949.jpg",
     "index.html": "/FindWaldo/index.html",
     "main.6d5e234b.css.map": "/FindWaldo/static/css/main.6d5e234b.css.map",
-    "main.c19b2554.js.map": "/FindWaldo/static/js/main.c19b2554.js.map"
+    "main.ac7af9e0.js.map": "/FindWaldo/static/js/main.ac7af9e0.js.map"
   },
   "entrypoints": [
     "static/css/main.6d5e234b.css",
-    "static/js/main.c19b2554.js"
+    "static/js/main.ac7af9e0.js"
   ]
 }
