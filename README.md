@@ -9,3 +9,6 @@ Technologies :
 - CSS
 - Javascript
 - Firebase database
+
+
+Live Preview here : https://issei20.github.io/FindWaldo/
